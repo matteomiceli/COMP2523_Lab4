@@ -19,15 +19,20 @@ app.get("/myForm", (req, res) => res.render("pages/myForm"));
 app.post("/myForm", (req, res) => {
   let movieInput = req.body;
   let movieList = movieInput.movieInput.split(',');
-  res.render('pages/index', { movies: movieList });
+
+  res.render('pages/index', { movies: movieList, from: 'form' });
 });
 
 app.get("/myListQueryString", (req, res) => {
-  // Add your implementation here
+  let movie1 = req.query.movie1
+  let movie2 = req.query.movie2
+
+  res.render('pages/index', { movie1: movie1, movie2: movie2, from: 'query' });
 });
 
 app.get("/search/:movieName", (req, res) => {
-  // Add your implementation here
+  
+
 });
 
 app.listen(3000, () => {
