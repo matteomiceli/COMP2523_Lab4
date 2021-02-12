@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
     <title>Movieflix</title>
 </head>
 
 <body>
     <!-- Create your text area form here -->
-    <form action="/myForm" method="post">
+    <h1 class="subheader">Enter a list of movies separated by commas.</h1>
+    <form action="/myForm" method="post" class="movie-form">
         <textarea name="movieInput" id="movieInput" cols="30" rows="10"
             placeholder="Movies separated by commas"></textarea>
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" class="btn">
     </form>
 </body>
 

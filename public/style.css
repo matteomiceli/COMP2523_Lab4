@@ -113,3 +113,17 @@ body {
   -webkit-transform-origin: left;
           transform-origin: left;
 }
+a {
+  color: white;
+}
+
+.movie-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin:auto;
+}
+
+.btn{
+  width: 100px;
+}

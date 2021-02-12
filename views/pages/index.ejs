@@ -27,19 +27,27 @@
               </span>
             </label>
           <% }); %>
-          <% } else if (from = 'query') { %>
+          <% } else if (from == 'query') { %>
+            <% queryList.forEach(query => { %>
+              <label class="todo-list__label">
+                <input type="checkbox" name="" id="" />
+                <i class="check"></i>
+                <span>
+                  <%= query %>
+                </span>
+              </label>
+            <% }); %>
+            <% } else if (from == 'noQuery') { %>
             <label class="todo-list__label">
-              <input type="checkbox" name="" id="" />
-              <i class="check"></i>
-              <span>
-                <%= movie1 %>
-              </span>
-            </label>
+              <label class="todo-list__label">
+                <span>
+                  No movies found... <a href="/">go back home</a>?
+                </span>
+              </label>
+          <% } else { %>
             <label class="todo-list__label">
-              <input type="checkbox" name="" id="" />
-              <i class="check"></i>
               <span>
-                <%= movie2 %>
+                Please <a href="/myForm">add a movie</a> to the list
               </span>
             </label>
           <% } %>
