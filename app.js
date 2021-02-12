@@ -16,8 +16,10 @@ app.get("/", (req, res) => res.render("pages/index"));
 
 app.get("/myForm", (req, res) => res.render("pages/myForm"));
 
-app.post("myForm", (req, res) => {
-  // Add your implementation here 
+app.post("/myForm", (req, res) => {
+  let movieInput = req.body;
+  let movieList = movieInput.movieInput.split(',');
+  res.render('pages/index', { movies: movieList });
 });
 
 app.get("/myListQueryString", (req, res) => {
